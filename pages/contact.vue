@@ -15,6 +15,7 @@
 </template>
 
 <script lang="ts" setup>
+definePageMeta({ middleware: "auth", auth: { guestRedirectTo: "/login" } })
 type User = {
   name: string;
   salary: number;

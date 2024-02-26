@@ -17,6 +17,7 @@
 </template>
 
 <script lang="ts" setup>
+definePageMeta({ middleware: "auth", auth: { guestRedirectTo: "/login" } })
 const route = useRoute();
 const id = route.params.id;
 const { data, pending } = await useLazyFetch<any>(`/api/blog/${id}`);

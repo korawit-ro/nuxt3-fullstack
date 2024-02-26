@@ -11,7 +11,9 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: "about-layout",
+  layout: 'about-layout',
+  middleware: 'auth',
+  auth: { guestRedirectTo: '/login' },
 });
 
 const appConfig = useAppConfig();
