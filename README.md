@@ -2,6 +2,15 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## VS Code Extentions
+
+
+[Vue.js Extension Pack](https://marketplace.visualstudio.com/items?itemName=mubaidr.vuejs-extension-pack)
+
+[Nuxtr](https://marketplace.visualstudio.com/items?itemName=Nuxtr.nuxtr-vscode)
+
+Disable (Workspace) : @builtin typescript
+
 ## Setup
 
 Make sure to install the dependencies:
