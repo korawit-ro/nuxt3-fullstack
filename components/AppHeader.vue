@@ -11,21 +11,21 @@
           <img style="width: 100px" src="/images/nuxt.png" alt="Element logo" />
         </el-menu-item>
         <div class="flex-grow" />
-        <el-menu-item index="1">
-          <NuxtLink to="/">Home</NuxtLink>
-        </el-menu-item>
-        <el-menu-item index="2"
-          ><NuxtLink to="about">About Us</NuxtLink>
-        </el-menu-item>
-        <el-menu-item index="3"
-          ><NuxtLink to="contact">Contact Us</NuxtLink>
-        </el-menu-item>
-        <el-menu-item index="4"
-          ><NuxtLink to="product">Product</NuxtLink>
-        </el-menu-item>
-        <el-menu-item index="5"
-          ><NuxtLink to="blog">Blog</NuxtLink>
-        </el-menu-item>
+        <NuxtLink to="/">
+          <el-menu-item index="1"> Home </el-menu-item>
+        </NuxtLink>
+        <NuxtLink to="about">
+          <el-menu-item index="2"> About Us </el-menu-item>
+        </NuxtLink>
+        <NuxtLink to="contact">
+          <el-menu-item index="3"> Contact Us </el-menu-item>
+        </NuxtLink>
+        <NuxtLink to="product">
+          <el-menu-item index="4"> Product </el-menu-item>
+        </NuxtLink>
+        <NuxtLink to="blog">
+          <el-menu-item index="5"> Blog </el-menu-item>
+        </NuxtLink>
         <el-sub-menu index="6">
           <template #title>Workspace</template>
           <el-menu-item index="2-1">item one</el-menu-item>
@@ -45,29 +45,25 @@
 
 <script lang="ts" setup>
 const route = useRoute();
-const activeIndex = ref("1");
+const activeIndex = ref('1');
 
-watch(
-  () => route.path,
-  routeCheck,
-);
+watch(() => route.path, routeCheck);
 
 function routeCheck() {
-  if (route.path === "/") {
-    activeIndex.value = "1";
-  } else if (route.path === "/about") {
-    activeIndex.value = "2";
-  } else if (route.path === "/contact") {
-    activeIndex.value = "3";
-  } else if (route.path === "/product") {
-    activeIndex.value = "4";
-  } else if (route.path.indexOf("/blog") !== -1) {
-    activeIndex.value = "5";
+  if (route.path === '/') {
+    activeIndex.value = '1';
+  } else if (route.path === '/about') {
+    activeIndex.value = '2';
+  } else if (route.path === '/contact') {
+    activeIndex.value = '3';
+  } else if (route.path === '/product') {
+    activeIndex.value = '4';
+  } else if (route.path.indexOf('/blog') !== -1) {
+    activeIndex.value = '5';
   }
 }
 
 routeCheck();
-
 </script>
 
 <style>
