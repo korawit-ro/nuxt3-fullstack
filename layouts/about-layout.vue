@@ -1,10 +1,10 @@
 <template>
   <div>
-    <h1 class="text-2xl">AboutpHeader</h1>
+    <h1 class="text-2xl">AboutHeader</h1>
     <hr />
     <slot />
     <hr />
-    <h1 class="text-2xl">AboutpFooter {{ appConfig.subTitle }}</h1>
+    <h1 class="text-2xl">AboutFooter</h1>
   </div>
 </template>
 

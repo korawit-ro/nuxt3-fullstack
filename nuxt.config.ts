@@ -15,7 +15,13 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@element-plus/nuxt', '@nuxt/image', 'nuxt-mongoose'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@element-plus/nuxt',
+    '@nuxt/image',
+    'nuxt-mongoose',
+    '@hebilicious/authjs-nuxt',
+  ],
   image: {
     domains: [],
   },
