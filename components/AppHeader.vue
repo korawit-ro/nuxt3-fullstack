@@ -20,13 +20,10 @@
         <NuxtLink to="contact">
           <el-menu-item index="3"> Contact Us </el-menu-item>
         </NuxtLink>
-        <NuxtLink to="product">
-          <el-menu-item index="4"> Product </el-menu-item>
-        </NuxtLink>
         <NuxtLink to="blog">
-          <el-menu-item index="5"> Blog </el-menu-item>
+          <el-menu-item index="4"> Blog </el-menu-item>
         </NuxtLink>
-        <el-sub-menu index="6">
+        <el-sub-menu index="5">
           <template #title>Workspace</template>
           <el-menu-item index="2-1">item one</el-menu-item>
           <el-menu-item index="2-2">item two</el-menu-item>
@@ -56,18 +53,27 @@ function routeCheck() {
     activeIndex.value = '2';
   } else if (route.path === '/contact') {
     activeIndex.value = '3';
-  } else if (route.path === '/product') {
-    activeIndex.value = '4';
   } else if (route.path.indexOf('/blog') !== -1) {
-    activeIndex.value = '5';
+    activeIndex.value = '4';
   }
 }
 
 routeCheck();
 </script>
 
-<style>
+<style scoped>
 .flex-grow {
   flex-grow: 1;
+}
+
+.el-menu-item {
+  height: 100%;
+}
+
+.el-menu-item.is-active {
+    border-bottom: 2px solid var(--el-color-primary);
+    border-bottom: 2px solid var(--el-menu-active-color);
+    color: var(--el-color-primary)!important;
+    color: var(--el-menu-active-color)!important;
 }
 </style>
