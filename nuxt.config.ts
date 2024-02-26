@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@element-plus/nuxt'],
+  modules: ['@nuxtjs/tailwindcss', '@element-plus/nuxt', '@nuxt/image'],
+  image: {
+    domains: [],
+  },
 });
